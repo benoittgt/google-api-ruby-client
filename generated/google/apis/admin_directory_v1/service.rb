@@ -189,7 +189,7 @@ module Google
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
         def stop_channel(channel_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
-          command =  make_simple_command(:post, '/admin/directory_v1/channels/stop', options)
+          command =  make_simple_command(:post, '/channels/stop', options)
           command.request_representation = Google::Apis::AdminDirectoryV1::Channel::Representation
           command.request_object = channel_object
           command.query['fields'] = fields unless fields.nil?
